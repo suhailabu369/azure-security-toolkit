@@ -1,0 +1,92 @@
+# ─────────────────────────────────────────────────────────────
+# REQUIREMENTS — Azure Security Toolkit
+# ─────────────────────────────────────────────────────────────
+#
+# WHAT IS THIS FILE?
+# This file lists all the external Python libraries this project
+# needs. When you run:
+#
+#     pip install -r requirements.txt
+#
+# Python will automatically download and install everything listed
+# here. You only need to do this once before running the script.
+#
+# ─────────────────────────────────────────────────────────────
+# BEFORE YOU START — make sure you have Python installed
+# ─────────────────────────────────────────────────────────────
+#
+# Check if Python is installed:
+#     python --version   (Windows)
+#     python3 --version  (Mac/Linux)
+#
+# Should show Python 3.8 or higher.
+# If not installed, download from: https://www.python.org/downloads/
+#
+# ─────────────────────────────────────────────────────────────
+# STEP 1 — (Optional but recommended) Create a virtual environment
+# ─────────────────────────────────────────────────────────────
+#
+# A virtual environment keeps this project's dependencies separate
+# from your other Python projects. Recommended practice.
+#
+# Windows:
+#     python -m venv venv
+#     venv\Scripts\activate
+#
+# Mac/Linux:
+#     python3 -m venv venv
+#     source venv/bin/activate
+#
+# You'll see (venv) appear in your terminal — that means it's active.
+# To deactivate later just type: deactivate
+#
+# ─────────────────────────────────────────────────────────────
+# STEP 2 — Install dependencies
+# ─────────────────────────────────────────────────────────────
+#
+# Run this command from the project root folder:
+#
+#     pip install -r requirements.txt
+#
+# ─────────────────────────────────────────────────────────────
+# DEPENDENCIES (only 2 external libraries needed)
+# Everything else the script uses is built into Python already.
+# ─────────────────────────────────────────────────────────────
+
+# requests — Used to make HTTP calls to the Microsoft Graph API
+# Handles all GET requests, pagination, and authentication headers
+requests==2.31.0
+
+# python-dotenv — Used to load credentials from your .env file
+# Reads TENANT_ID, CLIENT_ID, CLIENT_SECRET securely at runtime
+# so credentials are never hardcoded in the script
+python-dotenv==1.0.0
+
+# ─────────────────────────────────────────────────────────────
+# Built-in modules used (no installation needed):
+#   os          — reads environment variables loaded by dotenv
+#   datetime    — calculates 90-day cutoff for stale accounts
+#   timezone    — ensures UTC-aware time comparisons
+# ─────────────────────────────────────────────────────────────
+#
+# STEP 3 — Set up your .env file
+# ─────────────────────────────────────────────────────────────
+#
+# Copy the example file and fill in your Azure credentials:
+#
+#     cp .env.example .env       (Mac/Linux)
+#     copy .env.example .env     (Windows)
+#
+# Then open .env and replace the placeholder values with your
+# actual Azure App Registration credentials.
+# See README.md for step-by-step instructions on creating
+# the App Registration in Azure Portal.
+#
+# ─────────────────────────────────────────────────────────────
+# STEP 4 — Run the audit
+# ─────────────────────────────────────────────────────────────
+#
+#     python audit.py      (Windows)
+#     python3 audit.py     (Mac/Linux)
+#
+# ─────────────────────────────────────────────────────────────
