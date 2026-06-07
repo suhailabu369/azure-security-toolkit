@@ -18,6 +18,21 @@ Built from real-world experience securing enterprise Azure environments.
 
 ---
 
+## 🚀 Getting Started
+
+Follow these steps in order:
+
+| Step | Guide | What it covers |
+|------|-------|---------------|
+| 1 | [Prerequisites](./docs/01-prerequisites.md) | Python, pip, Git, Azure access |
+| 2 | [Azure App Registration](./docs/02-azure-setup.md) | Create app, add permissions, get credentials |
+| 3 | [Environment Setup](./docs/03-env-setup.md) | Create and configure your .env file |
+| 4 | [Installation](./docs/04-installation.md) | Clone repo, virtual environment, pip install |
+| 5 | [Running the Audit](./docs/05-running-the-audit.md) | Run the script and understand findings |
+| 6 | [Troubleshooting](./docs/06-troubleshooting.md) | Common errors and fixes |
+
+---
+
 ## 🛠️ Prerequisites
 
 - Python 3.8+
